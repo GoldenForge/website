@@ -1,8 +1,10 @@
 import Link from "next/link";
 
+import DiscordIcon from "@/assets/icons/fontawesome/discord-brands.svg";
 import GitHubIcon from "@/assets/icons/fontawesome/github-brands.svg";
 
 const ICONS = {
+  discord: DiscordIcon,
   github: GitHubIcon,
 } as const;
 

@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import GoldenForgeStatic from "@/assets/brand/goldenforge-static.png";
 import IconButton from "@/components/input/IconButton";
 import NavLink from "@/components/layout/NavLink";
-import { GITHUB_REPO_URL } from "@/lib/service/builds";
+import { DISCORD_URL, GITHUB_REPO_URL } from "@/lib/service/builds";
 
 const NavBar = () => {
   const [scroll, setScroll] = useState(false);
@@ -35,6 +35,7 @@ const NavBar = () => {
         </Link>
         <NavLink href="/downloads">Downloads</NavLink>
         <div className="grow" />
+        <IconButton iconId="discord" label="Discord" href={DISCORD_URL} external />
         <IconButton iconId="github" label="GitHub" href={GITHUB_REPO_URL} external />
       </div>
     </nav>

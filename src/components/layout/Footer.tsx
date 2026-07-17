@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import GoldenForgeMark from "@/assets/brand/goldenforge.gif";
-import { GITHUB_REPO_URL } from "@/lib/service/builds";
+import { DISCORD_URL, GITHUB_REPO_URL } from "@/lib/service/builds";
 
 const Footer = () => (
   <footer className="bg-primary-200 dark:bg-background-dark-80 mt-16">
@@ -24,6 +24,14 @@ const Footer = () => (
           className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
         >
           GitHub
+        </Link>
+        <Link
+          href={DISCORD_URL}
+          target="_blank"
+          rel="noreferrer"
+          className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors"
+        >
+          Discord
         </Link>
         <Link href="/downloads" className="hover:text-gold-600 dark:hover:text-gold-400 transition-colors">
           Downloads

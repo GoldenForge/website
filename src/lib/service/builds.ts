@@ -1,6 +1,7 @@
 export const GITHUB_OWNER = "GoldenForge";
 export const GITHUB_REPO = "GoldenForge";
 export const GITHUB_REPO_URL = `https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}`;
+export const DISCORD_URL = "https://discord.gg/g3e5J8tX6e";
 export const WORKFLOW_FILE = "build.yml";
 
 // Artifacts are deleted by GitHub ~90 days after the run.
