@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@custom-variant dark (@media (prefers-color-scheme: dark));
+
+@theme {
+  --font-sans: Poppins, Roboto, Open Sans, ui-sans-serif, system-ui, sans-serif;
+
+  /* Gold ramp — light surfaces tinted warm */
+  --color-primary-0: #ffffff;
+  --color-primary-100: #fefaf0;
+  --color-primary-200: #fdf5e0;
+  --color-primary-300: #fbefd0;
+  --color-primary-400: #f9e9c0;
+  --color-primary-500: #f7e2ae;
+  --color-primary-600: #f4da9a;
+  --color-primary-700: #f0d184;
+  --color-primary-800: #ecc76d;
+  --color-primary-900: #e7bc55;
+  --color-primary-1000: #e2b13d;
+
+  /* Gold ramp — dark mode accents */
+  --color-primary-dark-0: #fdf5e0;
+  --color-primary-dark-50: #f7e2ae;
+  --color-primary-dark-100: #ecc76d;
+  --color-primary-dark-200: #e2b13d;
+  --color-primary-dark-300: #d49b1c;
+  --color-primary-dark-400: #b98410;
+  --color-primary-dark-500: #94690c;
+  --color-primary-dark-600: #6f4e09;
+  --color-primary-dark-700: #4a3406;
+  --color-primary-dark-800: #251a03;
+  --color-primary-dark-900: #120d01;
+
+  --color-gold-300: #f0d184;
+  --color-gold-400: #e7bc55;
+  --color-gold-500: #d49b1c;
+  --color-gold-600: #b98410;
+  --color-gold-700: #94690c;
+
+  --color-background-dark-90: #121110;
+  --color-background-dark-80: #1b1917;
+  --color-background-light-10: #fffcf5;
+  --color-background-light-0: #ffffff;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+html {
+  @apply bg-background-light-10 dark:bg-background-dark-90 dark:text-white scroll-smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply flex flex-col h-screen;
+}
+
+[role=button], button {
+    cursor: pointer
+}
